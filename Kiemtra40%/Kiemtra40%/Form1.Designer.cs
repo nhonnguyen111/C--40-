@@ -136,7 +136,7 @@
             // 
             this.pictureBox1.Image = global::Kiemtra40_.Properties.Resources.img1;
             this.pictureBox1.Location = new System.Drawing.Point(-2, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(304, 243);
             this.pictureBox1.TabIndex = 1;
