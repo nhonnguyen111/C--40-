@@ -278,6 +278,18 @@
   <ItemGroup>
     <None Include="Resources\img.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-tag-23-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-tag-23-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imglogin2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.5.1.0\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.5.1.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
