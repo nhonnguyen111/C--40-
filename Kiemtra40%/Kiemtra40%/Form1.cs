@@ -60,5 +60,11 @@ namespace Kiemtra40_
         {
             return AccountDAO.Instance.Login(UserName, PassWord);
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            txUserName.Clear();
+            txPassWord.Clear();
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace Kiemtra40_.DAO
 
         private DataProvider() { }
         
-        public string connectionData = "Data Source=DESKTOP-02M1514\\SQLEXPRESS02;Initial Catalog=QuanLyQuanCaPhe;Integrated Security=True";
+        public string connectionData = "Data Source=.\\sqlexpress;Initial Catalog=QuanLyQuanCaPhe;Integrated Security=True";
         //Data Source=DESKTOP-02M1514\SQLEXPRESS02;Initial Catalog=QuanLyQuanCaPhe;Integrated Security=True
         public DataTable ExecuQuery(string query, object[] parameter = null)
         {

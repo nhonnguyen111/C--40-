@@ -51,17 +51,19 @@
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(310, 3);
+            this.panel1.Location = new System.Drawing.Point(30, 183);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(504, 191);
+            this.panel1.Size = new System.Drawing.Size(336, 124);
             this.panel1.TabIndex = 0;
             // 
             // btnExit
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Location = new System.Drawing.Point(368, 143);
+            this.btnExit.Location = new System.Drawing.Point(245, 93);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(117, 41);
+            this.btnExit.Size = new System.Drawing.Size(78, 27);
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -69,9 +71,10 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(238, 143);
+            this.btnLogin.Location = new System.Drawing.Point(159, 93);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(117, 41);
+            this.btnLogin.Size = new System.Drawing.Size(78, 27);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -81,16 +84,18 @@
             // 
             this.panel3.Controls.Add(this.txPassWord);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(3, 73);
+            this.panel3.Location = new System.Drawing.Point(2, 47);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(501, 63);
+            this.panel3.Size = new System.Drawing.Size(334, 41);
             this.panel3.TabIndex = 2;
             // 
             // txPassWord
             // 
-            this.txPassWord.Location = new System.Drawing.Point(210, 17);
+            this.txPassWord.Location = new System.Drawing.Point(140, 11);
+            this.txPassWord.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txPassWord.Name = "txPassWord";
-            this.txPassWord.Size = new System.Drawing.Size(270, 26);
+            this.txPassWord.Size = new System.Drawing.Size(181, 20);
             this.txPassWord.TabIndex = 1;
             this.txPassWord.Text = "0";
             this.txPassWord.UseSystemPasswordChar = true;
@@ -99,7 +104,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 19);
+            this.label2.Location = new System.Drawing.Point(11, 12);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 26);
             this.label2.TabIndex = 0;
@@ -109,16 +115,18 @@
             // 
             this.panel2.Controls.Add(this.txUserName);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(501, 63);
+            this.panel2.Size = new System.Drawing.Size(334, 41);
             this.panel2.TabIndex = 0;
             // 
             // txUserName
             // 
-            this.txUserName.Location = new System.Drawing.Point(210, 17);
+            this.txUserName.Location = new System.Drawing.Point(140, 11);
+            this.txUserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txUserName.Name = "txUserName";
-            this.txUserName.Size = new System.Drawing.Size(270, 26);
+            this.txUserName.Size = new System.Drawing.Size(181, 20);
             this.txUserName.TabIndex = 1;
             this.txUserName.Text = "admin";
             // 
@@ -126,7 +134,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 17);
+            this.label1.Location = new System.Drawing.Point(11, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 26);
             this.label1.TabIndex = 0;
@@ -135,24 +144,25 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Kiemtra40_.Properties.Resources.Untitled2;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(94, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(304, 256);
+            this.pictureBox1.Size = new System.Drawing.Size(203, 166);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // fLogin
             // 
             this.AcceptButton = this.btnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(816, 266);
+            this.ClientSize = new System.Drawing.Size(398, 340);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "fLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Team 09";
