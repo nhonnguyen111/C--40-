@@ -48,6 +48,7 @@
             this.cbTable = new System.Windows.Forms.ComboBox();
             this.btnTable = new System.Windows.Forms.Button();
             this.mnDiscount = new System.Windows.Forms.NumericUpDown();
+            this.btnDiscount = new System.Windows.Forms.Button();
             this.btnCheckout = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.numberFood = new System.Windows.Forms.NumericUpDown();
@@ -55,7 +56,6 @@
             this.cbFoods = new System.Windows.Forms.ComboBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.pnTable = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnDiscount = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -66,6 +66,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -75,14 +76,14 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1064, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1064, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // adminToolStripMenuItem
             // 
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(81, 32);
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
             this.adminToolStripMenuItem.Text = "Admin";
             this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
             // 
@@ -92,7 +93,7 @@
             this.tàiKhoảnCáNhânToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem});
             this.thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(182, 32);
+            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(182, 29);
             this.thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             // 
             // tàiKhoảnCáNhânToolStripMenuItem
@@ -115,7 +116,7 @@
             this.thêmMónToolStripMenuItem,
             this.thanhToánToolStripMenuItem});
             this.chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
-            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(113, 32);
+            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(113, 29);
             this.chứcNăngToolStripMenuItem.Text = "Chức năng";
             // 
             // thêmMónToolStripMenuItem
@@ -168,7 +169,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Số lượng";
-            this.columnHeader2.Width = 97;
+            this.columnHeader2.Width = 80;
             // 
             // columnHeader3
             // 
@@ -197,12 +198,12 @@
             // txbtotalPrice
             // 
             this.txbtotalPrice.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbtotalPrice.ForeColor = System.Drawing.Color.Blue;
-            this.txbtotalPrice.Location = new System.Drawing.Point(223, 19);
+            this.txbtotalPrice.ForeColor = System.Drawing.Color.Lime;
+            this.txbtotalPrice.Location = new System.Drawing.Point(220, 19);
             this.txbtotalPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbtotalPrice.Name = "txbtotalPrice";
             this.txbtotalPrice.ReadOnly = true;
-            this.txbtotalPrice.Size = new System.Drawing.Size(134, 32);
+            this.txbtotalPrice.Size = new System.Drawing.Size(131, 32);
             this.txbtotalPrice.TabIndex = 7;
             this.txbtotalPrice.Text = "0";
             this.txbtotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -236,15 +237,32 @@
             this.mnDiscount.TabIndex = 4;
             this.mnDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btnDiscount
+            // 
+            this.btnDiscount.Image = global::Kiemtra40_.Properties.Resources.iconmonstr_tag_23_12;
+            this.btnDiscount.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDiscount.Location = new System.Drawing.Point(110, 7);
+            this.btnDiscount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDiscount.Name = "btnDiscount";
+            this.btnDiscount.Size = new System.Drawing.Size(106, 33);
+            this.btnDiscount.TabIndex = 5;
+            this.btnDiscount.Text = "Giảm giá";
+            this.btnDiscount.UseVisualStyleBackColor = true;
+            // 
             // btnCheckout
             // 
+            this.btnCheckout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(150)))), ((int)(((byte)(86)))));
+            this.btnCheckout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(150)))), ((int)(((byte)(86)))));
+            this.btnCheckout.FlatAppearance.BorderSize = 0;
+            this.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckout.ForeColor = System.Drawing.Color.White;
             this.btnCheckout.Location = new System.Drawing.Point(357, 6);
             this.btnCheckout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCheckout.Name = "btnCheckout";
             this.btnCheckout.Size = new System.Drawing.Size(92, 67);
             this.btnCheckout.TabIndex = 4;
             this.btnCheckout.Text = "Thanh toán";
-            this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.UseVisualStyleBackColor = false;
             this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // panel4
@@ -315,23 +333,13 @@
             this.pnTable.Name = "pnTable";
             this.pnTable.Size = new System.Drawing.Size(578, 522);
             this.pnTable.TabIndex = 5;
-            // 
-            // btnDiscount
-            // 
-            this.btnDiscount.Image = global::Kiemtra40_.Properties.Resources.iconmonstr_tag_23_12;
-            this.btnDiscount.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDiscount.Location = new System.Drawing.Point(110, 7);
-            this.btnDiscount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDiscount.Name = "btnDiscount";
-            this.btnDiscount.Size = new System.Drawing.Size(106, 33);
-            this.btnDiscount.TabIndex = 5;
-            this.btnDiscount.Text = "Giảm giá";
-            this.btnDiscount.UseVisualStyleBackColor = true;
+            this.pnTable.Paint += new System.Windows.Forms.PaintEventHandler(this.pnTable_Paint);
             // 
             // fTableManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1064, 576);
             this.Controls.Add(this.pnTable);
             this.Controls.Add(this.panel4);

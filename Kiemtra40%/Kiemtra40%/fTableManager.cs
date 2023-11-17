@@ -75,10 +75,10 @@ namespace Kiemtra40_
                 switch(item.Status)
                 {
                     case "Trống" :
-                        btn.BackColor = Color.Aqua;
+                        btn.BackColor = Color.FromArgb(153,204,255);
                         break;
                     default:
-                        btn.BackColor = Color.AntiqueWhite;
+                        btn.BackColor = Color.FromArgb(255,204,0);
                         break;
                 }
             }
@@ -189,7 +189,7 @@ namespace Kiemtra40_
 
             if(table == null)
             {
-                MessageBox.Show("Hãy chọn bàn");
+                MessageBox.Show("Hãy chọn bàn","Cảnh báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
 
@@ -219,9 +219,36 @@ namespace Kiemtra40_
             if (idBill != -1)
             {
                 if(MessageBox.Show("Bạn muốn thanh toán hóa đơn cho " + table.Name, "Thông báo",MessageBoxButtons.OKCancel)== System.Windows.Forms.DialogResult.OK)
-                {   
+                {
+                        //Thêm thông tin thời gian cho hóa đơn
+                        DateTime curr = DateTime.Now;
+                        string time = curr.ToString("dd-MM-yyyy");
+                        
                         BillDAO.Instance.CheckOut(idBill, discount,(float) finalTotalPrice);
-                        MessageBox.Show(string.Format("Số bàn : {0}\n Tổng tiền : {1} \n Giảm giá : {2} \n Thành tiền : {3}", table.Name + "\n", totalPrice + "000 đồng", discount + "%", finalTotalPrice + "000 đồng"), "Hóa đơn", MessageBoxButtons.OK);
+                        
+                        // Hiển thị thông tin hóa đơn trong MessageBox
+                        StringBuilder billInfo = new StringBuilder();
+                        billInfo.AppendLine($"TEAM 09 COFFEE".PadLeft(35));
+                        billInfo.AppendLine($"\nSố bàn: {table.Name}");
+                        billInfo.AppendLine($"Thời gian: {time}");
+                        billInfo.AppendLine("Chi tiết hóa đơn:");
+                        
+                        billInfo.AppendLine($"-------------------------------------------------");
+                        // Hiển thị thông tin món đã chọn 
+                        foreach (ListViewItem item in lswBill.Items)
+                        {
+                            string tenMon = item.SubItems[0].Text;
+                            string sl = item.SubItems[1].Text.PadLeft(10);
+                            string thanhTien = item.SubItems[3].Text.PadLeft(10);  
+
+                            billInfo.AppendLine($"{tenMon} {sl} {thanhTien}");
+                        }
+                        billInfo.AppendLine($"-------------------------------------------------");
+                        billInfo.AppendLine($"Tổng: {totalPrice},000");
+                        billInfo.AppendLine($"Giảm giá: {discount}%");
+                        billInfo.AppendLine($"Thành tiền: {finalTotalPrice}00");
+
+                        MessageBox.Show(billInfo.ToString(), "Hóa đơn", MessageBoxButtons.OK);
                         ShowBill(table.ID);
                         LoadTable();              
                 }
@@ -241,8 +268,12 @@ namespace Kiemtra40_
         }
 
 
+
         #endregion
 
-        
+        private void pnTable_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

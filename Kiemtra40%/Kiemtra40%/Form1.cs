@@ -52,7 +52,7 @@ namespace Kiemtra40_
             }
             else
             {
-                MessageBox.Show("Tài khoản  - Mật khẩu không đúng !!!");
+                MessageBox.Show("Tài khoản hoặc Mật khẩu không chính xác!","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             
         }
