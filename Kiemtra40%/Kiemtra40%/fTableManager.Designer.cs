@@ -48,14 +48,14 @@
             this.cbTable = new System.Windows.Forms.ComboBox();
             this.btnTable = new System.Windows.Forms.Button();
             this.mnDiscount = new System.Windows.Forms.NumericUpDown();
-            this.btnDiscount = new System.Windows.Forms.Button();
             this.btnCheckout = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.numberFood = new System.Windows.Forms.NumericUpDown();
-            this.btnAddFood = new System.Windows.Forms.Button();
             this.cbFoods = new System.Windows.Forms.ComboBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.pnTable = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAddFood = new System.Windows.Forms.Button();
+            this.btnDiscount = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -138,10 +138,10 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.lswBill);
-            this.panel2.Location = new System.Drawing.Point(598, 128);
+            this.panel2.Location = new System.Drawing.Point(598, 122);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(452, 347);
+            this.panel2.Size = new System.Drawing.Size(452, 330);
             this.panel2.TabIndex = 2;
             // 
             // lswBill
@@ -156,7 +156,7 @@
             this.lswBill.Location = new System.Drawing.Point(2, 0);
             this.lswBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lswBill.Name = "lswBill";
-            this.lswBill.Size = new System.Drawing.Size(450, 346);
+            this.lswBill.Size = new System.Drawing.Size(450, 329);
             this.lswBill.TabIndex = 0;
             this.lswBill.UseCompatibleStateImageBehavior = false;
             this.lswBill.View = System.Windows.Forms.View.Details;
@@ -189,17 +189,17 @@
             this.panel3.Controls.Add(this.mnDiscount);
             this.panel3.Controls.Add(this.btnDiscount);
             this.panel3.Controls.Add(this.btnCheckout);
-            this.panel3.Location = new System.Drawing.Point(598, 484);
+            this.panel3.Location = new System.Drawing.Point(598, 460);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(452, 78);
+            this.panel3.Size = new System.Drawing.Size(452, 74);
             this.panel3.TabIndex = 3;
             // 
             // txbtotalPrice
             // 
             this.txbtotalPrice.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbtotalPrice.ForeColor = System.Drawing.Color.Lime;
-            this.txbtotalPrice.Location = new System.Drawing.Point(220, 19);
+            this.txbtotalPrice.Location = new System.Drawing.Point(220, 18);
             this.txbtotalPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbtotalPrice.Name = "txbtotalPrice";
             this.txbtotalPrice.ReadOnly = true;
@@ -211,18 +211,19 @@
             // cbTable
             // 
             this.cbTable.FormattingEnabled = true;
-            this.cbTable.Location = new System.Drawing.Point(3, 42);
+            this.cbTable.Location = new System.Drawing.Point(3, 40);
             this.cbTable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbTable.Name = "cbTable";
-            this.cbTable.Size = new System.Drawing.Size(105, 28);
+            this.cbTable.Size = new System.Drawing.Size(105, 27);
             this.cbTable.TabIndex = 4;
             // 
             // btnTable
             // 
+            this.btnTable.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnTable.Location = new System.Drawing.Point(2, 7);
             this.btnTable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTable.Name = "btnTable";
-            this.btnTable.Size = new System.Drawing.Size(106, 33);
+            this.btnTable.Size = new System.Drawing.Size(106, 31);
             this.btnTable.TabIndex = 6;
             this.btnTable.Text = "Chuyển bàn";
             this.btnTable.UseVisualStyleBackColor = true;
@@ -230,28 +231,16 @@
             // 
             // mnDiscount
             // 
-            this.mnDiscount.Location = new System.Drawing.Point(112, 44);
+            this.mnDiscount.Location = new System.Drawing.Point(112, 42);
             this.mnDiscount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mnDiscount.Name = "mnDiscount";
-            this.mnDiscount.Size = new System.Drawing.Size(102, 26);
+            this.mnDiscount.Size = new System.Drawing.Size(102, 27);
             this.mnDiscount.TabIndex = 4;
             this.mnDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnDiscount
-            // 
-            this.btnDiscount.Image = global::Kiemtra40_.Properties.Resources.iconmonstr_tag_23_12;
-            this.btnDiscount.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDiscount.Location = new System.Drawing.Point(110, 7);
-            this.btnDiscount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDiscount.Name = "btnDiscount";
-            this.btnDiscount.Size = new System.Drawing.Size(106, 33);
-            this.btnDiscount.TabIndex = 5;
-            this.btnDiscount.Text = "Giảm giá";
-            this.btnDiscount.UseVisualStyleBackColor = true;
-            // 
             // btnCheckout
             // 
-            this.btnCheckout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(150)))), ((int)(((byte)(86)))));
+            this.btnCheckout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(172)))), ((int)(((byte)(77)))));
             this.btnCheckout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(150)))), ((int)(((byte)(86)))));
             this.btnCheckout.FlatAppearance.BorderSize = 0;
             this.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -259,7 +248,7 @@
             this.btnCheckout.Location = new System.Drawing.Point(357, 6);
             this.btnCheckout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(92, 67);
+            this.btnCheckout.Size = new System.Drawing.Size(92, 64);
             this.btnCheckout.TabIndex = 4;
             this.btnCheckout.Text = "Thanh toán";
             this.btnCheckout.UseVisualStyleBackColor = false;
@@ -271,15 +260,15 @@
             this.panel4.Controls.Add(this.btnAddFood);
             this.panel4.Controls.Add(this.cbFoods);
             this.panel4.Controls.Add(this.cbCategory);
-            this.panel4.Location = new System.Drawing.Point(598, 39);
+            this.panel4.Location = new System.Drawing.Point(598, 37);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(452, 82);
+            this.panel4.Size = new System.Drawing.Size(452, 78);
             this.panel4.TabIndex = 4;
             // 
             // numberFood
             // 
-            this.numberFood.Location = new System.Drawing.Point(396, 25);
+            this.numberFood.Location = new System.Drawing.Point(396, 24);
             this.numberFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numberFood.Minimum = new decimal(new int[] {
             100,
@@ -287,7 +276,7 @@
             0,
             -2147483648});
             this.numberFood.Name = "numberFood";
-            this.numberFood.Size = new System.Drawing.Size(48, 26);
+            this.numberFood.Size = new System.Drawing.Size(48, 27);
             this.numberFood.TabIndex = 3;
             this.numberFood.Value = new decimal(new int[] {
             1,
@@ -295,24 +284,13 @@
             0,
             0});
             // 
-            // btnAddFood
-            // 
-            this.btnAddFood.Location = new System.Drawing.Point(297, 4);
-            this.btnAddFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAddFood.Name = "btnAddFood";
-            this.btnAddFood.Size = new System.Drawing.Size(92, 67);
-            this.btnAddFood.TabIndex = 2;
-            this.btnAddFood.Text = "Thêm món";
-            this.btnAddFood.UseVisualStyleBackColor = true;
-            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
-            // 
             // cbFoods
             // 
             this.cbFoods.FormattingEnabled = true;
-            this.cbFoods.Location = new System.Drawing.Point(3, 41);
+            this.cbFoods.Location = new System.Drawing.Point(3, 39);
             this.cbFoods.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbFoods.Name = "cbFoods";
-            this.cbFoods.Size = new System.Drawing.Size(286, 28);
+            this.cbFoods.Size = new System.Drawing.Size(286, 27);
             this.cbFoods.TabIndex = 1;
             // 
             // cbCategory
@@ -321,26 +299,56 @@
             this.cbCategory.Location = new System.Drawing.Point(3, 4);
             this.cbCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(286, 28);
+            this.cbCategory.Size = new System.Drawing.Size(286, 27);
             this.cbCategory.TabIndex = 0;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
             // pnTable
             // 
             this.pnTable.AutoScroll = true;
-            this.pnTable.Location = new System.Drawing.Point(14, 39);
+            this.pnTable.Location = new System.Drawing.Point(14, 37);
             this.pnTable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnTable.Name = "pnTable";
-            this.pnTable.Size = new System.Drawing.Size(578, 522);
+            this.pnTable.Size = new System.Drawing.Size(578, 496);
             this.pnTable.TabIndex = 5;
             this.pnTable.Paint += new System.Windows.Forms.PaintEventHandler(this.pnTable_Paint);
             // 
+            // btnAddFood
+            // 
+            this.btnAddFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(172)))), ((int)(((byte)(77)))));
+            this.btnAddFood.FlatAppearance.BorderSize = 0;
+            this.btnAddFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddFood.ForeColor = System.Drawing.Color.White;
+            this.btnAddFood.Image = global::Kiemtra40_.Properties.Resources.icons8_plus_17;
+            this.btnAddFood.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAddFood.Location = new System.Drawing.Point(297, 4);
+            this.btnAddFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddFood.Name = "btnAddFood";
+            this.btnAddFood.Size = new System.Drawing.Size(92, 64);
+            this.btnAddFood.TabIndex = 2;
+            this.btnAddFood.Text = "Thêm";
+            this.btnAddFood.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAddFood.UseVisualStyleBackColor = false;
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
+            // 
+            // btnDiscount
+            // 
+            this.btnDiscount.Image = global::Kiemtra40_.Properties.Resources.iconmonstr_tag_23_12;
+            this.btnDiscount.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDiscount.Location = new System.Drawing.Point(110, 7);
+            this.btnDiscount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDiscount.Name = "btnDiscount";
+            this.btnDiscount.Size = new System.Drawing.Size(106, 31);
+            this.btnDiscount.TabIndex = 5;
+            this.btnDiscount.Text = "Giảm giá";
+            this.btnDiscount.UseVisualStyleBackColor = true;
+            // 
             // fTableManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1064, 576);
+            this.ClientSize = new System.Drawing.Size(1064, 547);
             this.Controls.Add(this.pnTable);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
