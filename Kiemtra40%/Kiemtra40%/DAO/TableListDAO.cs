@@ -20,8 +20,8 @@ namespace Kiemtra40_.DAO
                 get { if (instance == null) instance = new TableDAO(); return instance; }
                 private set { instance = value; }
             }
-            public static int TableWidth = 70;
-            public static int TableHeight = 70;
+            public static int TableWidth = 92;
+            public static int TableHeight = 92;
             public TableDAO() { }
             public void SwitchTable(int id1, int id2)
             {

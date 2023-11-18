@@ -240,13 +240,12 @@ namespace Kiemtra40_
                             string tenMon = item.SubItems[0].Text;
                             string sl = item.SubItems[1].Text.PadLeft(10);
                             string thanhTien = item.SubItems[3].Text.PadLeft(10);  
-
                             billInfo.AppendLine($"{tenMon} {sl} {thanhTien}");
                         }
                         billInfo.AppendLine($"-------------------------------------------------");
-                        billInfo.AppendLine($"Tổng: {totalPrice},000");
+                        billInfo.AppendLine($"Tổng: {totalPrice},000 đồng");
                         billInfo.AppendLine($"Giảm giá: {discount}%");
-                        billInfo.AppendLine($"Thành tiền: {finalTotalPrice}00");
+                        billInfo.AppendLine($"Thành tiền: {finalTotalPrice},000 đồng");
 
                         MessageBox.Show(billInfo.ToString(), "Hóa đơn", MessageBoxButtons.OK);
                         ShowBill(table.ID);
