@@ -186,14 +186,11 @@ namespace Kiemtra40_
         private void btnAddFood_Click(object sender, EventArgs e)
         {
             Table table = lswBill.Tag as Table;
-
             if(table == null)
             {
                 MessageBox.Show("Hãy chọn bàn","Cảnh báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
-
-
             int idBill = BillDAO.Instance.GetBillByIDTable(table.ID);
             int foodId = (cbFoods.SelectedItem as Foods).ID;
             int count = (int)numberFood.Value;

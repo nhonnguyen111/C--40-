@@ -9,7 +9,7 @@ namespace Kiemtra40_.DTO
 {
     public class Foods
     {
-        public Foods(int id, string name, int idcategory, float price) 
+        public Foods(int id, string name, string idcategory, float price) 
         {
             this.iD = id;
             this.name = name;
@@ -20,19 +20,19 @@ namespace Kiemtra40_.DTO
         public Foods(DataRow row)
         {
             this.iD = (int)row["ID"];
-            this.name = row["name"].ToString();
-            this.IDCategory = (int)row["idCategory"];
-            this.Price = (float)Convert.ToDouble(row["price"].ToString());
+            this.name = row["Tên món"].ToString();         
+            this.IDCategory = row["Danh mục"].ToString();
+            this.Price = (float)Convert.ToDouble(row["Giá"].ToString());
         }
        
         private int iD;
         private string name;
-        private int iDCategory;
+        private string iDCategory;
         private float Price;
 
         public int ID { get => iD; set => iD = value; }
         public string Name { get => name; set => name = value; }
-        public int IDCategory { get => iDCategory; set => iDCategory = value; }
+        public string IDCategory { get => iDCategory; set => iDCategory = value; }
         public float Price1 { get => Price; set => Price = value; }
         
     }

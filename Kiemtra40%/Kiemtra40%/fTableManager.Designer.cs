@@ -150,10 +150,10 @@
             this.columnHeader4});
             this.lswBill.GridLines = true;
             this.lswBill.HideSelection = false;
-            this.lswBill.Location = new System.Drawing.Point(0, 3);
+            this.lswBill.Location = new System.Drawing.Point(3, 3);
             this.lswBill.Name = "lswBill";
             this.lswBill.Scrollable = false;
-            this.lswBill.Size = new System.Drawing.Size(487, 266);
+            this.lswBill.Size = new System.Drawing.Size(484, 266);
             this.lswBill.TabIndex = 0;
             this.lswBill.UseCompatibleStateImageBehavior = false;
             this.lswBill.View = System.Windows.Forms.View.Details;
@@ -270,14 +270,14 @@
             // 
             // numberFood
             // 
-            this.numberFood.Location = new System.Drawing.Point(352, 20);
+            this.numberFood.Location = new System.Drawing.Point(419, 21);
             this.numberFood.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
             this.numberFood.Name = "numberFood";
-            this.numberFood.Size = new System.Drawing.Size(43, 22);
+            this.numberFood.Size = new System.Drawing.Size(54, 22);
             this.numberFood.TabIndex = 3;
             this.numberFood.Value = new decimal(new int[] {
             1,
@@ -293,7 +293,7 @@
             this.btnAddFood.ForeColor = System.Drawing.Color.White;
             this.btnAddFood.Image = global::Kiemtra40_.Properties.Resources.icons8_plus_17;
             this.btnAddFood.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAddFood.Location = new System.Drawing.Point(264, 3);
+            this.btnAddFood.Location = new System.Drawing.Point(328, 7);
             this.btnAddFood.Name = "btnAddFood";
             this.btnAddFood.Size = new System.Drawing.Size(82, 54);
             this.btnAddFood.TabIndex = 2;
@@ -307,7 +307,7 @@
             this.cbFoods.FormattingEnabled = true;
             this.cbFoods.Location = new System.Drawing.Point(3, 33);
             this.cbFoods.Name = "cbFoods";
-            this.cbFoods.Size = new System.Drawing.Size(255, 24);
+            this.cbFoods.Size = new System.Drawing.Size(319, 24);
             this.cbFoods.TabIndex = 1;
             // 
             // cbCategory
@@ -315,7 +315,7 @@
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Location = new System.Drawing.Point(3, 3);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(255, 24);
+            this.cbCategory.Size = new System.Drawing.Size(319, 24);
             this.cbCategory.TabIndex = 0;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 

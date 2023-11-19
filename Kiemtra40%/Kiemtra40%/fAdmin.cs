@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Kiemtra40_
 {
@@ -95,7 +96,7 @@ namespace Kiemtra40_
             txbIDTable.DataBindings.Add(new Binding("Text", dtgvTable.DataSource, "id",true,DataSourceUpdateMode.Never));
             txbNumberTable.DataBindings.Add(new Binding("Text", dtgvTable.DataSource, "name",true,DataSourceUpdateMode.Never));
         }
-        void LoadCategoryIntoCombox(ComboBox cb)
+        void LoadCategoryIntoCombox(System.Windows.Forms.ComboBox cb)
         {
             cb.DataSource = CategoryDAO.Instance.GetListCategory();
             cb.DisplayMember = "Name";
@@ -229,7 +230,7 @@ namespace Kiemtra40_
             int id = Convert.ToInt32(txbIDCategory.Text);
             if (CategoryDAO.Instance.DeleteCategory(id))
             {
-                MessageBox.Show("Xóa món thành công");
+                MessageBox.Show("Xóa danh mục thành công");
                 LoadListCategory();
                 //if (deleteFood != null)
                 //    deleteFood(this, new EventArgs());
@@ -420,6 +421,7 @@ namespace Kiemtra40_
         {
            foodlist.DataSource = SearchFoodByName(txbSearchFood.Text);
         }
+
 
 
 
