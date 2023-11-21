@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -18,8 +19,9 @@ namespace Kiemtra40_.DAO
             this.name = row["Name"].ToString();   
         }
         private int iD;
-
+        [DisplayName("STT")]
         public int ID { get => iD; set => iD = value; }
+        [DisplayName("Tên danh mục")]
         public string Name { get => name; set => name = value; }
 
         private string name;

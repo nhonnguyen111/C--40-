@@ -80,7 +80,7 @@ namespace Kiemtra40_
         {
             foodlist.DataSource = FoodDAO.Instance.GetListFoods();
         }
-        void LoadListTable()
+        void LoadListTable() 
         {
             tableList.DataSource = TableListDAO.TableDAO.Instance.GetLoadTableList();
         }
@@ -88,7 +88,7 @@ namespace Kiemtra40_
         {
             txbFoodName.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "name",true,DataSourceUpdateMode.Never));
             txbIDFood.DataBindings.Add(new Binding("Text",dtgvFood.DataSource, "id", true, DataSourceUpdateMode.Never));
-            mnFoodPrice.DataBindings.Add(new Binding("Value",dtgvFood.DataSource,"Price1", true, DataSourceUpdateMode.Never));
+            mnFoodPrice.DataBindings.Add(new Binding("Value",dtgvFood.DataSource,"price", true, DataSourceUpdateMode.Never));
         }
         void AddTableBinding()
         {

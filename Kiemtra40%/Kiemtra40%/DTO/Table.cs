@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -21,23 +22,29 @@ namespace Kiemtra40_.DTO
             this.Status = (string)row["status"];
 
         }
-
-        private string status;
-
-        public string Status { 
-            get => status;
-            set => status = value; }
-        
+        private int iD;
+        [DisplayName("STT")]
+        public int ID
+        {
+            get => iD;
+            set => iD = value;
+        }
+       
 
         private string name;
+        [DisplayName("Số bàn")]
         public string Name {
             get => name; 
             set => name = value; }
-        
 
-        private int iD;
-        public int ID {
-            get => iD;
-            set => iD = value; }
+        private string status;
+        [DisplayName("Trạng thái")]
+        public string Status
+        {
+            get => status;
+            set => status = value;
+        }
+
+
     }
 }

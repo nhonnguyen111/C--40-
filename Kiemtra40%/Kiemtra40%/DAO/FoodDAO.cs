@@ -38,7 +38,7 @@ namespace Kiemtra40_.DAO
         public List<Foods> GetListFoods()
         {
             List<Foods> list = new List<Foods>();
-            string query = "USP_GetListFoods ";
+            string query = "SELECT a.id,a.name, b.name, a.price  FROM Food a, FoodCategory b WHERE a.idCategory = b.id\r\n ";
             DataTable data = DataProvider.Instance.ExecuQuery(query);
             foreach (DataRow item in data.Rows)
             {
@@ -73,7 +73,7 @@ namespace Kiemtra40_.DAO
         public List<Foods> SearchFoodByName(string name)
         {
             List<Foods> foods = new List<Foods>();
-            string query =string.Format("SELECT a.ID, a.name AS \"Tên món\", b.name as \"Danh mục\" , a.price as \"Giá\" FROM Food a,FoodCategory b WHERE LOWER(a.name) COLLATE Latin1_General_CI_AI LIKE '%' + LOWER(N'{0}') + '%' AND a.idCategory = b.id;", name);
+            string query =string.Format("SELECT a.ID, a.name, b.name  , a.price  FROM Food a,FoodCategory b WHERE LOWER(a.name) COLLATE Latin1_General_CI_AI LIKE '%' + LOWER(N'{0}') + '%' AND a.idCategory = b.id;", name);
             DataTable data = DataProvider.Instance.ExecuQuery(query);
             foreach (DataRow row in data.Rows)
             {

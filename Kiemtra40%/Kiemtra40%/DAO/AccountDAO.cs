@@ -51,7 +51,7 @@ namespace Kiemtra40_.DAO
         }
         public DataTable GetListAccount()
         {
-            return DataProvider.Instance.ExecuQuery("SELECT UserName, DisplayName, type FROM Account");
+            return DataProvider.Instance.ExecuQuery("SELECT UserName , DisplayName, type FROM Account");
         }
         public Account GetAccountByUserName(string userName)
         {

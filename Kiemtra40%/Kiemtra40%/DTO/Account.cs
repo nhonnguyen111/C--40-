@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -18,18 +19,25 @@ namespace Kiemtra40_.DTO
         }    
         public Account(DataRow row) 
         {
-            this.Username = row["username"].ToString();
-            this.Displayname = row["displayname"].ToString();
+            this.Username = row["UserName"].ToString();
+            this.Displayname = row["DisplayName"].ToString();
             this.Type = (int)row["type"];
             this.Password = row["password"].ToString();
         }
         private string username;
-        private string password;
-        private string displayname;
-        private int type;
+        
+        
+        
+        [DisplayName("Tài khoản")]
         public string Username { get => username; set => username = value; }
+        private string password;
+        [DisplayName("Mật khẩu")]
         public string Password { get => password; set => password = value; }
+        private string displayname;
+        [DisplayName("Tên hiển thị")]
         public string Displayname { get => displayname; set => displayname = value; }
+        private int type;
+        [DisplayName("Chức vụ")]
         public int Type { get => type; set => type = value; }
     }
 }

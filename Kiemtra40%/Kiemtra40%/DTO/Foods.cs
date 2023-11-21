@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -20,20 +21,23 @@ namespace Kiemtra40_.DTO
         public Foods(DataRow row)
         {
             this.iD = (int)row["ID"];
-            this.name = row["Tên món"].ToString();         
-            this.IDCategory = row["Danh mục"].ToString();
-            this.Price = (float)Convert.ToDouble(row["Giá"].ToString());
+            this.name = row["Name"].ToString();         
+            this.IDCategory = row["name"].ToString();
+            this.Price = (float)Convert.ToDouble(row["Price"].ToString());
         }
        
         private int iD;
         private string name;
         private string iDCategory;
-        private float Price;
+        private float price;
 
+        [DisplayName("STT")]
         public int ID { get => iD; set => iD = value; }
+        [DisplayName("Tên món")]
         public string Name { get => name; set => name = value; }
+        [DisplayName("Danh Mục")]
         public string IDCategory { get => iDCategory; set => iDCategory = value; }
-        public float Price1 { get => Price; set => Price = value; }
-        
+        [DisplayName("Giá")]
+        public float Price { get => price; set => price = value; }
     }
 }

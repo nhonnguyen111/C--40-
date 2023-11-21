@@ -98,10 +98,9 @@ namespace Kiemtra40_
                 totalPrice += item.TotalPrice;
                 lswBill.Items.Add(lsvItem);
             }
-            CultureInfo culture = new CultureInfo("vi-VN");
-            //Thread.CurrentThread.CurrentCulture = culture;
-            txbtotalPrice.Text = totalPrice.ToString("c", culture);
-            
+            txbtotalPrice.Text = totalPrice.ToString("c", new CultureInfo("vi-VN"));
+
+
         }
         void LoadComboboxTable(ComboBox cb)
         {
@@ -242,7 +241,16 @@ namespace Kiemtra40_
                         billInfo.AppendLine($"-------------------------------------------------");
                         billInfo.AppendLine($"Tổng: {totalPrice},000 đồng");
                         billInfo.AppendLine($"Giảm giá: {discount}%");
-                        billInfo.AppendLine($"Thành tiền: {finalTotalPrice},000 đồng");
+                        string totalPriceString = (finalTotalPrice * 1000).ToString("#,##0");
+                        int decimalSeparatorIndex = totalPriceString.IndexOf(','); 
+                        if (decimalSeparatorIndex > 10)
+                        {
+                            totalPriceString = totalPriceString.Insert(10, ".");
+                        }
+
+                        string formattedOutput = $"Thành tiền: {totalPriceString} đồng";
+                        billInfo.AppendLine(formattedOutput);
+                         //billInfo.AppendLine($"Thành tiền: {finalTotalPrice*1000} đồng");
 
                         MessageBox.Show(billInfo.ToString(), "Hóa đơn", MessageBoxButtons.OK);
                         ShowBill(table.ID);
